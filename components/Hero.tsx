@@ -16,10 +16,10 @@ const Hero: React.FC<HeroProps> = ({ config }) => {
 
   return (
     <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
-      {/* Background with overlay */}
+      {/* Background with overlay - Updated to Boeing 787 image */}
       <div 
         className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-[10s] hover:scale-105"
-        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=2000&auto=format&fit=crop')` }}
+        style={{ backgroundImage: `url('https://images.unsplash.com/photo-1544015759-137fdf556bf1?q=80&w=2000&auto=format&fit=crop')` }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent z-10" />
       
