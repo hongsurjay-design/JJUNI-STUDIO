@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, Phone, MapPin, ExternalLink } from 'lucide-react';
+import { Mail, ExternalLink } from 'lucide-react';
 
 interface FooterProps {
   onAdminClick: () => void;
@@ -47,9 +47,7 @@ const Footer: React.FC<FooterProps> = ({ onAdminClick }) => {
         <div>
           <h4 className="text-xs font-bold text-white uppercase tracking-widest mb-8">Contact Us</h4>
           <ul className="space-y-4 text-sm text-zinc-500 font-light">
-            <li className="flex items-center gap-3"><Mail size={16} /> contact@jjuni-studio.com</li>
-            <li className="flex items-center gap-3"><Phone size={16} /> +82 2 1234 5678</li>
-            <li className="flex items-start gap-3"><MapPin size={16} className="mt-1 shrink-0" /> 서울특별시 강남구 테헤란로<br/>고급 신사 빌딩 8층</li>
+            <li className="flex items-center gap-3"><Mail size={16} /> <a href="mailto:hongsurjay@gmail.com" className="hover:text-purple-400 transition-colors">hongsurjay@gmail.com</a></li>
           </ul>
         </div>
       </div>

@@ -32,7 +32,7 @@ const App: React.FC = () => {
   }, []);
 
   const handleAdminLogin = (password: string) => {
-    if (password === 'admin123') {
+    if (password === 'sjsj1004!') {
       setIsAdminLoggedIn(true);
       setView('admin');
       return true;
@@ -70,11 +70,11 @@ const App: React.FC = () => {
             </div>
           </main>
           <Footer onAdminClick={() => {
-            const pass = prompt('관리자 비밀번호를 입력하세요 (admin123)');
-            if (pass === 'admin123') {
+            const pass = prompt('관리자 비밀번호를 입력하세요');
+            if (pass === 'sjsj1004!') {
               setIsAdminLoggedIn(true);
               setView('admin');
-            } else {
+            } else if (pass !== null) {
               alert('비밀번호가 틀렸습니다.');
             }
           }} />
@@ -93,10 +93,12 @@ const App: React.FC = () => {
       {!isAdminLoggedIn && (
         <button 
           onClick={() => {
-            const pass = prompt('관리자 비밀번호를 입력하세요 (admin123)');
-            if (pass === 'admin123') {
+            const pass = prompt('관리자 비밀번호를 입력하세요');
+            if (pass === 'sjsj1004!') {
               setIsAdminLoggedIn(true);
               setView('admin');
+            } else if (pass !== null) {
+              alert('비밀번호가 틀렸습니다.');
             }
           }}
           className="fixed bottom-8 right-8 w-12 h-12 bg-zinc-900 border border-zinc-800 rounded-full flex items-center justify-center text-zinc-500 hover:text-purple-500 hover:border-purple-500 transition-all z-50 group"
