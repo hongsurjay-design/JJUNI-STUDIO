@@ -7,6 +7,13 @@ interface HeroProps {
 }
 
 const Hero: React.FC<HeroProps> = ({ config }) => {
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
       {/* Background with overlay */}
@@ -28,12 +35,16 @@ const Hero: React.FC<HeroProps> = ({ config }) => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button 
+            onClick={() => scrollToSection('featured')}
             style={{ backgroundColor: config.pointColor }}
-            className="px-10 py-4 rounded-full font-bold text-sm tracking-widest hover:brightness-110 transition-all shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
+            className="px-10 py-4 rounded-full font-bold text-sm tracking-widest hover:brightness-110 active:scale-95 transition-all shadow-[0_10px_30px_rgba(0,0,0,0.3)] text-white"
           >
             DISCOVER MORE
           </button>
-          <button className="px-10 py-4 rounded-full font-bold text-sm tracking-widest bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white/20 transition-all">
+          <button 
+            onClick={() => scrollToSection('data-room')}
+            className="px-10 py-4 rounded-full font-bold text-sm tracking-widest bg-white/10 border border-white/20 backdrop-blur-md hover:bg-white/20 active:scale-95 transition-all text-white"
+          >
             ARCHIVE
           </button>
         </div>
