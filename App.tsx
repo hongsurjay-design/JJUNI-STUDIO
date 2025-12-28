@@ -31,15 +31,6 @@ const App: React.FC = () => {
     storageService.saveConfig(newConfig);
   }, []);
 
-  const handleAdminLogin = (password: string) => {
-    if (password === 'sjsj1004!') {
-      setIsAdminLoggedIn(true);
-      setView('admin');
-      return true;
-    }
-    return false;
-  };
-
   const handleLogout = () => {
     setIsAdminLoggedIn(false);
     setView('user');
@@ -60,7 +51,11 @@ const App: React.FC = () => {
             setSearchQuery={setSearchQuery}
           />
           <main className="pt-20">
-            <Hero config={config} />
+            <Hero 
+              config={config} 
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+            />
             
             <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
               <FeaturedContent posts={filteredPosts.filter(p => p.isFeatured)} />
