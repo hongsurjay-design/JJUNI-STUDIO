@@ -1,0 +1,7 @@
+{
+  "name": "Jjuni Studio (쭈니 스튜디오)",
+  "description": "고품격 라이프스타일 매거진 및 프리미엄 정보 아카이브",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
